@@ -1,1 +1,80 @@
-<!doctype html><html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>둘길 — 함께할 오늘, 남겨둘 순간</title><link rel="stylesheet" href="/style.css"></head><body><div class="shell"><aside><a class="brand" href="#home">둘길<span>DULGIL</span></a><p class="tagline">함께할 오늘,<br>남겨둘 순간.</p><nav aria-label="메인 메뉴"><a href="#home">⌂ 홈</a><a href="#plan">↗ 데이트 계획</a><a href="#courses">♡ 우리의 코스</a><a href="#memories">▧ 추억 기록</a><a href="#anniversaries">◷ 기념일</a></nav><div class="aside-note">두 사람의 작은 여정<br><b>오늘도, 둘길</b></div></aside><main><header><span>OUR LITTLE JOURNEY</span><span class="badge">로컬 데모</span></header><p class="notice">가상 장소로 체험하는 첫 버전입니다. 데이터는 이 브라우저에 저장되며, 실제 로그인·커플 공유·지도 API는 아직 연결되지 않았어요.</p><div id="app"></div></main></div><div id="toast" role="status" aria-live="polite"></div><script type="module" src="/app.js"></script></body></html>
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#315747" />
+    <title>둘길 — 둘이 만드는 하루</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <a class="skip" href="#app">본문으로 이동</a>
+    <div class="shell">
+      <aside class="sidebar">
+        <a class="brand" href="#home"
+          ><span class="brand-mark">♡</span>둘길<span class="brand-en"
+            >dulgil</span
+          ></a
+        >
+        <p class="sidebar-caption">둘이 만드는 하루</p>
+        <nav aria-label="주요 메뉴">
+          <a href="#home" data-nav="home"><span>⌂</span>우리의 오늘</a
+          ><a href="#plan" data-nav="plan"><span>↗</span>데이트 만들기</a
+          ><a href="#courses" data-nav="courses"><span>♡</span>저장한 코스</a
+          ><a href="#memories" data-nav="memories"><span>▧</span>추억 보관함</a
+          ><a href="#anniversaries" data-nav="anniversaries"
+            ><span>▦</span>기념일·일정</a
+          >
+        </nav>
+        <a class="couple-widget" href="#couple"
+          ><div class="avatar-pair"><span>나</span><span>너</span></div>
+          <b>우리만의 공간</b><small>커플 연결 살펴보기 →</small></a
+        >
+        <div class="sidebar-bottom">
+          <a href="#pages">◫ 전체 페이지</a><a href="#settings">⚙ 프로필·설정</a
+          ><small>작은 순간이, 우리의 이야기가 되도록.</small>
+        </div>
+      </aside>
+      <div class="workspace">
+        <header class="topbar">
+          <a class="mobile-brand" href="#home">♡ 둘길</a
+          ><span class="breadcrumb" id="breadcrumb">우리의 오늘</span>
+          <div class="top-actions">
+            <span class="demo-badge">DESIGN DEMO</span
+            ><a
+              class="icon-button"
+              href="#anniversaries"
+              aria-label="기념일 보기"
+              >◷</a
+            ><a class="avatar" href="#settings" aria-label="프로필 설정">나</a>
+          </div>
+        </header>
+        <main id="app" tabindex="-1"></main>
+        <footer>
+          © 둘길 · 둘이 만드는 하루 <a href="#privacy">개인정보·권한</a
+          ><span>가상 장소 · 브라우저에만 저장되는 데모</span>
+        </footer>
+      </div>
+    </div>
+    <nav class="mobile-nav" aria-label="모바일 메뉴">
+      <a href="#home" data-mobile="home">⌂<small>홈</small></a
+      ><a href="#plan" data-mobile="plan">↗<small>계획</small></a
+      ><a href="#courses" data-mobile="courses">♡<small>코스</small></a
+      ><a href="#memories" data-mobile="memories">▧<small>추억</small></a
+      ><a href="#settings" data-mobile="settings">☷<small>더보기</small></a>
+    </nav>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <dialog id="confirm-dialog">
+      <form method="dialog">
+        <span class="eyebrow">PLEASE CHECK</span>
+        <h2 id="confirm-title">확인해주세요</h2>
+        <p id="confirm-text"></p>
+        <div class="actions">
+          <button class="secondary" value="cancel">취소</button
+          ><button class="danger" value="confirm">확인</button>
+        </div>
+      </form>
+    </dialog>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
